@@ -1,8 +1,10 @@
 package golam
 
+import "net/http"
+
 // Config for determining how golam runs
 type Config struct {
-	Middlewares []Middleware
+	Middlewares []http.Handler
 	Routes      []Route
 	UseTLSPort  int
 	UsePort     int

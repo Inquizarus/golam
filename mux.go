@@ -8,5 +8,5 @@ type Mux interface {
 	HandleFunc(pattern string, handlerFn http.HandlerFunc)
 	Handle(pattern string, handler http.Handler)
 	ServeHTTP(w http.ResponseWriter, r *http.Request)
-	Use(middleware ...Middleware)
+	Use(middleware ...http.Handler)
 }
