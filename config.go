@@ -6,8 +6,8 @@ import "net/http"
 type Config struct {
 	Middlewares []func(http.Handler) http.Handler
 	Routes      []Route
-	UseTLSPort  int
-	UsePort     int
+	UseTLSPort  string
+	UsePort     string
 	TLSCertPath string
 	TLSKeyPath  string
 	TLSEnabled  bool
